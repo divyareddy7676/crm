@@ -38,6 +38,11 @@
 				<h1>List of customers</h1>
 			</div>
 		</div>
+		<div th:unless="${!customers.isEmpty()}">
+			<div class=" row">
+				<h1>No customers to display</h1>
+			</div>
+		</div>
 		<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}" id="flashMessage" />
 		<div th:if="${!customers.isEmpty()}">
 			<table class="table table-bordered" id="customersTable">
